@@ -4,7 +4,7 @@ Angular Library and App Compatibility Playground.
 
 ## Library
 
-Created with
+Created with:
 
 * Angular CLI: 10.1.4
 * Node: 14.13.0
@@ -13,4 +13,11 @@ Created with
 ng new my-library --createApplication=false
 cd my-library
 ng generate library my-library
+```
+
+### Building
+
+```
+npm ci
+ng build my-library --prod
 ```

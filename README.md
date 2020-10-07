@@ -12,9 +12,9 @@ Created with:
 * Node: 14.13.0
 
 ```
-ng new my-library --createApplication=false
-cd my-library
-ng generate library my-library
+ng new library-ng10 --createApplication=false
+cd library-ng10
+ng generate library library-ng10
 ```
 
 ### Building

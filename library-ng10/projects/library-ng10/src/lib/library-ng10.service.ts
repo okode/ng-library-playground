@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MyLibraryService {
+export class LibraryNg10Service {
 
   constructor() { }
 }

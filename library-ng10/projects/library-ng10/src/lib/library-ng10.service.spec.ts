@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MyLibraryService } from './my-library.service';
+import { LibraryNg10Service } from './library-ng10.service';
 
-describe('MyLibraryService', () => {
-  let service: MyLibraryService;
+describe('LibraryNg10Service', () => {
+  let service: LibraryNg10Service;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MyLibraryService);
+    service = TestBed.inject(LibraryNg10Service);
   });
 
   it('should be created', () => {

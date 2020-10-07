@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "my-library": [
-        "dist/my-library/my-library",
-        "dist/my-library"
+      "library-ng10": [
+        "dist/library-ng10/library-ng10",
+        "dist/library-ng10"
       ]
     }
   }

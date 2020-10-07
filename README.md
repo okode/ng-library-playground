@@ -32,7 +32,7 @@ ng build my-library --prod
 * Node: 14.3.0
 
 ```
-ng new app-ng5
+ng new app-ng6
 ```
 
 ## Angular 8 Application

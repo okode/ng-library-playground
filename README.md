@@ -2,7 +2,7 @@
 
 Angular Library and App Compatibility Playground.
 
-## Library
+## Angular 10 Library
 
 ### Creation
 

@@ -24,7 +24,7 @@ npm ci
 ng build my-library --prod
 ```
 
-## Angular 5 Application
+## Angular 6 Application
 
 ### Creation
 
@@ -33,4 +33,15 @@ ng build my-library --prod
 
 ```
 ng new app-ng5
+```
+
+## Angular 8 Application
+
+### Creation
+
+* Angular CLI: 8.3.29
+* Node: 14.3.0
+
+```
+ng new app-ng8
 ```

@@ -2,7 +2,9 @@
 
 Angular Library and App Compatibility Playground.
 
-## Library
+## Library
+
+### Creation
 
 Created with:
 
@@ -15,7 +17,7 @@ cd my-library
 ng generate library my-library
 ```
 
-### Building
+### Building
 
 ```
 npm ci

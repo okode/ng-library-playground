@@ -23,3 +23,14 @@ ng generate library my-library
 npm ci
 ng build my-library --prod
 ```
+
+## Angular 5 Application
+
+### Creation
+
+* Angular CLI: 6.2.9
+* Node: 14.3.0
+
+```
+ng new app-ng5
+```

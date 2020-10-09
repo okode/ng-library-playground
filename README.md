@@ -56,3 +56,14 @@ ng new app-ng8
 ```
 ng new app-ng9
 ```
+
+## Angular 10 Application
+
+### Creation
+
+* Angular CLI: 10.1.4
+* Node: 14.3.0
+
+```
+ng new app-ng10
+```

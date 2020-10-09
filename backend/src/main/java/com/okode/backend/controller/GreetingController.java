@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     @GetMapping("/hello/{name}")
-    public Object hello(@PathVariable String name) {
+    Object hello(@PathVariable String name) {
         return new Object() { public final String response = "Hello, " + name; };
     }
 

@@ -2,6 +2,20 @@
 
 Angular Library and App Compatibility Playground.
 
+## Backend
+
+### Creation
+
+Created with Spring initializr:
+
+* Java language version 15
+* Gradle project type
+* Spring Boot 2.3.4
+* Group: com.okode
+* Package name: com.okode.backend
+* Packaging: Jar
+* Dependencies: Spring Reactive Web, Lombok
+
 ## Angular 10 Library
 
 ### Creation

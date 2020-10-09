@@ -24,6 +24,17 @@ npm ci
 ng build my-library --prod
 ```
 
+## Angular 5 Application
+
+### Creation
+
+* Angular CLI: 1.7.4
+* Node: 14.3.0
+
+```
+ng new app-ng5
+```
+
 ## Angular 6 Application
 
 ### Creation

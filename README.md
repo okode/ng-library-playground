@@ -29,6 +29,20 @@ docker build . -t backend
 docker run -ti -p 8080:8080 backend
 ```
 
+### Testing
+
+Start backend and run:
+
+```
+curl -v http://localhost:8080/hello/john
+```
+
+the expected response is:
+
+```
+{ "response": "Hello, john" }
+```
+
 ## Angular 10 Library
 
 ### Creation

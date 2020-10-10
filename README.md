@@ -14,7 +14,7 @@ Created with Spring initializr:
 * Group: com.okode
 * Package name: com.okode.backend
 * Packaging: Jar
-* Dependencies: Spring Reactive Web, Lombok
+* Dependencies: Spring Reactive Web
 
 ### Running
 

@@ -16,6 +16,19 @@ Created with Spring initializr:
 * Packaging: Jar
 * Dependencies: Spring Reactive Web, Lombok
 
+### Running
+
+```
+./gradlew bootJar
+```
+
+### Running with Docker
+
+```
+docker build . -t backend
+docker run backend
+```
+
 ## Angular 10 Library
 
 ### Creation

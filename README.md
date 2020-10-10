@@ -26,7 +26,7 @@ Created with Spring initializr:
 
 ```
 docker build . -t backend
-docker run backend
+docker run -ti -p 8080:8080 backend
 ```
 
 ## Angular 10 Library

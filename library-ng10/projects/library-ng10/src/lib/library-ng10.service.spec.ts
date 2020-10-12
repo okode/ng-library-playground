@@ -20,12 +20,12 @@ describe('LibraryNg10Service', () => {
 
   it('should return greeting message', () => {
     const name = 'john';
-    service.greeting(name).subscribe(data => {
-      expect(data.response).toEqual(`Hello, ${name}`);
+    service.greeting(name).subscribe(next => {
+      expect(next.response).toEqual(`Hello, ${name}`);
     });
     const req = http.expectOne(`http://localhost:8080/greeting/${name}`);
     expect(req.request.method).toBe('GET');
-    req.flush({response: `Hello, ${name}`});
+    req.flush({ response: `Hello, ${name}` });
   });
 
 });

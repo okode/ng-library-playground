@@ -84,6 +84,14 @@ ng build my-library --prod
 ng new app-ng5
 ```
 
+Customizations:
+
+* Added `preserveSymlinks` to `angular.json`:
+
+```
+"preserveSymlinks": true
+```
+
 ## Angular 6 Application
 
 ### Creation

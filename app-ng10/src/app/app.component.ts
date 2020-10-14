@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private libService: LibraryNg10Service) {}
 
   async clickGreeting() {
-    alert(await this.libService.greeting('John').toPromise());
+    alert((await this.libService.greeting('John').toPromise()).response);
   }
 
 }

@@ -58,6 +58,14 @@ cd library-ng10
 ng generate library library-ng10
 ```
 
+Customizations:
+
+* Added `ngcc` command to build task in `package.json`:
+
+```
+"build": "ng build --prod && ngcc"
+```
+
 ### Building
 
 ```

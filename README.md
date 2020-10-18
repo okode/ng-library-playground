@@ -119,6 +119,12 @@ ng new app-ng9
 
 Customizations:
 
+* Added `preserveSymlinks` to `angular.json`:
+
+```
+"preserveSymlinks": true
+```
+
 * Added library with `npm link library-ng10`
 
 ## Angular 10 Application
@@ -133,5 +139,11 @@ ng new app-ng10
 ```
 
 Customizations:
+
+* Added `preserveSymlinks` to `angular.json`:
+
+```
+"preserveSymlinks": true
+```
 
 * Added library with `npm link library-ng10`

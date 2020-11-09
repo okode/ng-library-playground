@@ -13,7 +13,9 @@ import { LibraryNg10Module } from 'library-ng10';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LibraryNg10Module
+    LibraryNg10Module.forRoot({
+      logo: './assets/mapfre-logo.svg'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

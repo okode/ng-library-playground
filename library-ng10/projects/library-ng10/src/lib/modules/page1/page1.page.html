@@ -1,2 +1,4 @@
+<img *ngIf="libraryConfig.logo" [src]="libraryConfig.logo" alt="APP Logo">
 <p><b>This is the Library</b></p>
 <a routerLink="/page2">Go to Page2 of the Library</a>
+<p>Logo path received by configuration: {{ libraryConfig.logo || 'Not received' }}</p>

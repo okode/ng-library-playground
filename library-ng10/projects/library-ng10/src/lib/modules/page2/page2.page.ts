@@ -1,4 +1,7 @@
+import { Inject } from '@angular/core';
 import { Component } from '@angular/core';
+
+import { LibraryConfig, LIBRARY_CONFIG } from '../../library-config';
 
 @Component({
   selector: 'lib-page2',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./page2.page.scss']
 })
 export class Page2Page {
-  constructor() { }
+  libraryConfig: LibraryConfig;
+
+  constructor(@Inject(LIBRARY_CONFIG) config: LibraryConfig = null) {
+    this.libraryConfig = config;
+  }
 }

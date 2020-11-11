@@ -14,4 +14,9 @@ export class Page2Page {
   constructor(@Inject(LIBRARY_CONFIG) config: LibraryConfig = null) {
     this.libraryConfig = config;
   }
+
+  onClick() {
+    const event = new Event('library-event');
+    dispatchEvent(event);
+  }
 }

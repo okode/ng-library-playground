@@ -5,4 +5,5 @@ export const LIBRARY_CONFIG = new InjectionToken<LibraryConfig>('Library configu
 export interface LibraryConfig {
   logo?: string;
   backPage?: string;
+  routesPrefix?: string;
 }

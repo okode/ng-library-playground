@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
+  goToPage1(): void {
+    this.router.navigateByUrl('/sinisters/page1');
+  }
 }

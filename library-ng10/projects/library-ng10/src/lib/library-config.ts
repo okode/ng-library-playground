@@ -6,4 +6,5 @@ export interface LibraryConfig {
   logo?: string;
   backPage?: string;
   routesPrefix?: string;
+  assetsPath: string;
 }

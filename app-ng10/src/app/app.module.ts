@@ -16,7 +16,8 @@ import { LibraryNg10Module } from 'library-ng10';
     LibraryNg10Module.forRoot(
       {
         logo: './assets/mapfre-logo.svg',
-        backPage: 'home'
+        backPage: 'home',
+        routesPrefix: 'sinisters'
       }
     )
   ],

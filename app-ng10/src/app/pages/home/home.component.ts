@@ -10,6 +10,6 @@ export class HomeComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   goToPage1(): void {
-    this.router.navigateByUrl('/sinisters/page1');
+    this.router.navigateByUrl('/vehicle-accidents/page1');
   }
 }

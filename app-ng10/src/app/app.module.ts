@@ -17,7 +17,7 @@ import { LibraryNg10Module } from 'library-ng10';
       {
         logo: 'assets/mapfre-logo.svg',
         backPage: 'home',
-        routesPrefix: 'sinisters',
+        routesPrefix: 'vehicle-accidents',
         assetsPath: 'assets/library-ng10'
       }
     )

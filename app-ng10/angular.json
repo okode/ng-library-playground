@@ -26,12 +26,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
               {
                 "glob": "*",
                 "input": "node_modules/library-ng10/assets",
                 "output": "assets/library-ng10"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"

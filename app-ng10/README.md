@@ -1,27 +1,82 @@
 # AppNg10
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Building
+```bash
+npm ci
+npm run start
+```
 
-## Development server
+## Linking
+We will have to do this every time we compile the library.
+```bash
+npm link library-ng10
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Import library assets
+They should be in the folder `projects/library-ng10/assets/**` and it has to be configured in the `ng-package.json` file:
+```json
+{
+  ...,
+  "assets": [
+    "./assets/**/*.svg"
+  ]
+}
+```
 
-## Code scaffolding
+## Navigation
+Navigation between pages should ALWAYS be relative, since a prefix can be configured from the application using library parameters:
+```ts
+this.router.navigate(['../page'], { relativeTo: this.route });
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Initialization parameters
+The library parameters are received through the overwritten `forRoot` method in the `library-ng10.module.ts` module:
+```ts
+static forRoot(libraryConfig: LibraryConfig): ModuleWithProviders<LibraryNg10Module> {
+  return {
+    ngModule: LibraryNg10Module,
+    providers: [
+      { provide: LIBRARY_CONFIG, useValue: libraryConfig }
+    ]
+  };
+}
+```
+In the `library-config.ts` file we have two exports, and `InjectionToken` and the configuration model where we will indicate if a parameter is required or not:
+```ts
+export const LIBRARY_CONFIG = new InjectionToken<LibraryConfig>('Library configuration');
 
-## Build
+export interface LibraryConfig {
+  logo?: string;
+  backPage?: string;
+  routesPrefix?: string;
+  assetsPath: string;
+}
+```
+To use the parameters received from an application we will have to use the following:
+```ts
+export class Page {
+  libraryConfig: LibraryConfig;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  constructor(@Inject(LIBRARY_CONFIG) config: LibraryConfig = null) {
+    this.libraryConfig = config;
+  }
+}
+```
 
-## Running unit tests
+## Image paths
+As the path where the library images will be found in the application can be passed as a parameter, it mus be indicated in the HTML as follows:
+```html
+<img
+  src="{{ libraryConfig.assetsPath }}/microphone.svg"
+  alt="#"
+/>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Throw events to catch them from the application
+To throw events with custom names from the library we will use:
+```ts
+onClick() {
+  const event = new Event('library-event');
+  dispatchEvent(event);
+}
+```
